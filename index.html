@@ -31,15 +31,18 @@
                 <div class="col s8">
                     <div class="row">
                         <div class="input-field col s8">
-                            <div class="card-panel">
-                                <input type="text" length="10" class="input" maxlength="10" value="" id="phNo"
+                            <div class="card-panel">                                
+                                <div class="input-field col s6">
+                                  <i class="material-icons prefix">phone</i>
+                                     <input type="text" length="10" class="input validate" maxlength="10" value="" id="phNo"
                                     required>
-                                <label for="input_text">Input text</label>
-                                <button class="btn waves-effect waves-light teal" name="submit"
+                                 <label for="icon_telephone">Telephone</label>
+                                </div>
+                                 <button class="btn waves-effect waves-light teal" name="submit"
                                     onClick="fnSendToWhatsapp()">Submit
                                     <i class="material-icons right">send</i>
                                 </button>
-                                <p class="text-muted">Limited to only Indian Numbers</p>
+                                <blockquote>Limited to only Indian Numbers</blockquote>
                             </div>
                         </div>
                     </div>
