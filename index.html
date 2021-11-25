@@ -65,9 +65,6 @@
 <script>
     function fnSendToWhatsapp() {
         var num = $("#phNo").val();
-        num = num.replace(/\D/g, '');
-        num = num.replace(/^0+/, '');
-
         window.location = 'https://api.whatsapp.com/send?phone=+91' + num;
         return false;
     }
