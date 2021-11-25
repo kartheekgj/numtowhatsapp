@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="teal">
         <!-- Dropdown Structure -->
         <nav>
             <div class="nav-wrapper">
@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <div class="card-panel">
-                                <input type="text" length="50" class="input" maxlength="10" value="" id="number"
+                                <input type="text" length="50" class="input" maxlength="10" value="" id="phNo"
                                     required>
                                 <label for="input_text">Input text</label>
                                 <button class="btn waves-effect waves-light" name="submit"
@@ -50,7 +50,7 @@
 
     </section>
 
-    <footer class="page-footer stickbottom" style="position:fixed;width:100%;">
+    <footer class="page-footer stickbottom teal" style="position:fixed;width:100%;">
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
@@ -65,11 +65,12 @@
 <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="./js/materialize.min.js"></script>
 <script>
-    function goapp(nummer) {
-        nummer = nummer.replace(/\D/g, '');
-        nummer = nummer.replace(/^0+/, '');
+    function fnSendToWhatsapp() {
+        var num = $("#phNo").val();
+        num = num.replace(/\D/g, '');
+        num = num.replace(/^0+/, '');
 
-        window.location = 'https://api.whatsapp.com/send?phone=' + nummer;
+        window.location = 'https://api.whatsapp.com/send?phone=' + num;
         return false;
     }
 </script>
