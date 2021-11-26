@@ -19,8 +19,8 @@
         <!-- Dropdown Structure -->
         <nav>
             <div class="nav-wrapper teal">
-                <div class="left hide-on-med-and-down"><img src="https://img.icons8.com/office/60/000000/whatsapp--v1.png"/></div>
-                <a href="#" class="brand-logo center" id="logo">WhatsApp without adding to contact</a>
+                <div class="left hide-on-med-and-down"></div>
+                <a href="#" class="brand-logo center" id="logo"><img src="https://img.icons8.com/office/40/000000/whatsapp--v1.png"/> No contact Whatsapp</a>
             </div>
         </nav>
 
@@ -35,10 +35,8 @@
                                 <i class="material-icons prefix">phone</i>
                                 <input type="text" length="10" class="input validate" placeholder="Phone Number without +91" maxlength="10" value="" id="phNo"
                                     required>
-                                <button class="btn waves-effect waves-light" name="submit"
-                                    onClick="fnSendToWhatsapp()">Submit
-                                    <i class="material-icons right">send</i>
-                                </button>
+                                <a class="waves-effect waves-light btn" name="submit" onClick="fnSendToWhatsapp();">Submit</a>
+                                <blockquote>Send whatsapp message to contact without adding them to your contact list</blockquote>
                                 <blockquote>Limited to only Indian Numbers</blockquote>
                             </div>
                         </div>
@@ -65,8 +63,13 @@
 <script>
     function fnSendToWhatsapp() {
         var num = $("#phNo").val();
-        window.location = 'https://wa.me/91' + num;
-        return false;
+        if(num.length < 10){
+            alert("Please enter a valid phone number");
+            return false;
+        }else{
+            window.location = 'https://wa.me/91' + num;
+            return false;
+        }        
     }
 </script>
 
