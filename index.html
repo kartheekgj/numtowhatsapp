@@ -20,7 +20,7 @@
         <nav>
             <div class="nav-wrapper teal">
                 <div class="left hide-on-med-and-down"></div>
-                <a href="#" class="brand-logo center" id="logo"><img src="https://img.icons8.com/office/40/000000/whatsapp--v1.png"/> No contact Whatsapp</a>
+                <a href="#" class="brand-logo center" id="logo"><img src="https://img.icons8.com/office/40/000000/whatsapp--v1.png" style="vertical-align: middle;margin-bottom: 8px;"/> No Contact Whatsapp</a>
             </div>
         </nav>
 
@@ -62,7 +62,7 @@
 <script>
     function fnSendToWhatsapp() {
         var num = $("#phNo").val();
-        if(num.length < 10){
+        if(!num || num.length < 10){
             alert("Please enter a valid phone number");
             return false;
         }else{
